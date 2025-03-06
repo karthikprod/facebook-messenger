@@ -49,7 +49,7 @@ app.post('/webhook/messenger', (req, res) => {
 
 // 3️⃣ Function to Send Messages
 function sendMessage(recipientId, message) {
-    axios.post(`https://graph.facebook.com/v13.0/me/messages?access_token=${PAGE_ACCESS_TOKEN}`, {
+    axios.post(`https://graph.facebook.com/v22.0/me/messages?access_token=${PAGE_ACCESS_TOKEN}`, {
         recipient: { id: recipientId },
         message: { text: message }
     }).then(response => {
